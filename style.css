@@ -53,10 +53,10 @@ input{
 }
 button{
     cursor: pointer;
-    padding: 16px 50px;
+    padding: 18px 40px;
     background-color: rgb(94, 143, 160);
     color: aliceblue;
-    font-weight: bold;
+   
     border-radius: 20px;
 }
 ul li{
@@ -96,4 +96,11 @@ ul li span{
 }
 ul li span:hover{
     background: rgb(126, 196, 226);
+}
+@media(max-width:500px)
+{
+    button{
+       padding: 10px 5px 9px;
+       
+    }
 }
