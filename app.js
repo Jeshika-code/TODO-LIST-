@@ -1,5 +1,6 @@
 const inputs=document.getElementById("input");
 const listitem=document.getElementById("list-container");
+const clearListBtn = document.getElementById('clearList');
 function addTask() {
     if(inputs.value === ''){
         alert("You must write something");
@@ -14,6 +15,7 @@ function addTask() {
     }
     inputs.value='';
 }
+
 listitem.addEventListener("click",function (e) {
     if(e.target.tagName==="LI"){
         e.target.classList.toggle("check");
@@ -24,3 +26,13 @@ listitem.addEventListener("click",function (e) {
     }
     
 },false);
+
+
+
+
+clearListBtn.addEventListener('click', () => {
+  // Remove all child elements of the todoList ul element
+  while (listitem.hasChildNodes()) {
+    listitem.removeChild(listitem.firstChild);
+  }
+});
